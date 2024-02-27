@@ -1,5 +1,6 @@
-import { createTvShowCard } from "./scripts/template.js";
+import { createTvShowCard } from "./template.js";
 
+// Function to fetch tv shows
 export const fetchTVShows = () => {
     return fetch("https://api.tvmaze.com/shows")
       .then(response => response.json())
@@ -9,6 +10,15 @@ export const fetchTVShows = () => {
       });
 };
 
+// Function to truncate the summary to a maximum length
+export const truncateSummary = (summary, maxLength) => {
+    if (summary.length > maxLength) {
+        return summary.substring(0, maxLength) + "..."; // Truncate and add ellipsis
+    }
+    return summary;
+};
+
+// Function to create a div with X amount of top rated shows
 export function createTopRatedShows(divContainer, count = 6) {
     fetchTVShows().then(tvShows => {
         // Sort TV shows by rating from high to low, then slice to get the first X shows
