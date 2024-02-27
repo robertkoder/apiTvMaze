@@ -36,3 +36,9 @@ body {
 .home-content-container {
   width: 80%;
 }
+
+/* RANDOMIZER */
+.randomizer-container {
+  margin-top: 10em;
+  text-align: center;
+}
