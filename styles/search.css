@@ -1,8 +1,14 @@
 .search-container {
     display: flex;
     justify-content: center;
-    margin-top: calc(5em + 20px); /* Additional space to account for the original 20px margin plus header height */
-    margin-bottom: 20px;
+    margin-top: 5em;
+    position: fixed;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background: rgba(31, 31, 31, 0.75); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur the background behind the container */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
 
 #search-input {
@@ -10,4 +16,27 @@
     font-size: 16px;
     border-radius: 5px; 
     border: 3px solid #eeb902;
+    background-color: #474747;
+    color: #f7f7f2;
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+#search-input::placeholder {
+    color: #f7f7f2;
+}
+
+#search-results {
+    margin-top: calc(5em + 85px);
+}
+
+
+
+
+/* move to style.css when ready, just removes horizontal scrolling */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
