@@ -6,6 +6,8 @@
 body {
   background: #1f1f1f;
   color: #f7f7f2;
+  display: flex;
+  flex-direction: column;
 }
 
 .landing-page-img {
