@@ -1,11 +1,20 @@
 export const tvShowCardTemplate = (tvShowData) => {
-    // Check if the rating is null and provide a fallback message
-    const rating = tvShowData.rating.average === null ? "X" : `⭐${tvShowData.rating.average}`;
+  // Check if the rating is null and provide a fallback message
+  const rating =
+    tvShowData.rating.average === null ? "X" : `⭐${tvShowData.rating.average}`;
 
-    // Choose image URL based on window width
-    const imageUrl = window.innerWidth > 450 ? tvShowData.image.original : tvShowData.image.medium;
+  // set placeholder image if not exist
+  let imageUrl = "../media/logo.png";
 
-    return `
+  // Choose image URL based on window width
+  if (tvShowData.image) {
+    imageUrl =
+      window.innerWidth > 450
+        ? tvShowData.image.original
+        : tvShowData.image.medium;
+  }
+
+  return `
     <div class="tv-show-item">
         <div class="tv-show-image" style="background-image: url('${imageUrl}');"></div>
         <div class="tv-show-info">
@@ -23,6 +32,6 @@ export const tvShowCardTemplate = (tvShowData) => {
 
 // Function to insert the Tv Show card into a div container
 export const createTvShowCard = (divContainer, tvShowData) => {
-    const container = document.querySelector(divContainer);
-    container.innerHTML += tvShowCardTemplate(tvShowData);
+  const container = document.querySelector(divContainer);
+  container.innerHTML += tvShowCardTemplate(tvShowData);
 };
