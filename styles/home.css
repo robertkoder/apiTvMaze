@@ -1,0 +1,35 @@
+.landing-page-img {
+    padding-top: 6em;
+    width: 70vw;
+  }
+
+section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.home-content-container {
+    width: 80%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tv-shows-list {
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    .landing-page-img {
+      width: 100vw;
+    }
+}

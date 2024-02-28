@@ -10,18 +10,6 @@ body {
   flex-direction: column;
 }
 
-.landing-page-img {
-  padding-top: 6em;
-  width: 90vw;
-  display: none; /*Only for desctop version*/
-}
-
-@media (min-width: 500px) {
-  .landing-page-img {
-    display: block;
-  }
-}
-
 .page-link {
   color: #f7f7f2;
   text-decoration: none;
@@ -33,12 +21,13 @@ body {
   border-bottom: 0.1em solid #eeb902;
 }
 
-.home-content-container {
-  width: 80%;
-}
-
 /* RANDOMIZER */
 .randomizer-container {
   margin-top: 10em;
   text-align: center;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
