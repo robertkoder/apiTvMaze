@@ -4,9 +4,8 @@
     gap: 20px;
     justify-content: center;
     padding: 30px;
-  }
+}
   
-
 .tv-show-item {
     margin-bottom: 20px;
     background-color: #474747;
@@ -41,7 +40,7 @@
     font-size: 1.5em;
     padding-left: 10px; /* Adds some space between the title and the rating */
     white-space: nowrap; /* Prevents the rating from wrapping */
-  }
+}
   
 .tv-show-genre {
     font-size: 1em;
@@ -61,4 +60,4 @@
     padding: 10px;
     display:grid;
     gap: 8px;
-}   
+}
