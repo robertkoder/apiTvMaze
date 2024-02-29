@@ -1,63 +1,68 @@
+* {
+  font-family: Varta, sans-serif;
+}
+
 .tv-shows-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
-    gap: 20px;
-    justify-content: center;
-    padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  gap: 20px;
+  justify-content: center;
+  padding: 30px;
 }
-  
+
 .tv-show-item {
-    margin-bottom: 20px;
-    background-color: #474747;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 10px 0px -1px #eeb902;
+  margin-bottom: 20px;
+  background-color: #474747;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 0px -1px #eeb902;
 }
-  
+
 .tv-show-image {
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 10px;
-    border-radius: 10px 10px 10px 10px;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .title-and-rating {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #eeb902;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #eeb902;
 }
-  
+
 .tv-show-title {
-    font-size: 1.5em;
-    margin: 0.5em 0;
-    flex: 1;
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  flex: 1;
+  font-family: Quicksand, sans-serif;
 }
 
 .tv-show-rating {
-    font-size: 1.5em;
-    padding-left: 10px; /* Adds some space between the title and the rating */
-    white-space: nowrap; /* Prevents the rating from wrapping */
+  font-size: 1.5em;
+  padding-left: 10px; /* Adds some space between the title and the rating */
+  white-space: nowrap; /* Prevents the rating from wrapping */
 }
-  
+
 .tv-show-genre {
-    font-size: 1em;
-    color: #f7f7f2;
-    margin-bottom: 10px;
+  font-size: 1em;
+  color: #f7f7f2;
+  margin-bottom: 10px;
 }
-  
+
 .tv-show-description {
-    font-size: 1em;
-    color: #f7f7f2;
+  font-size: 1em;
+  color: #f7f7f2;
 }
 
 .tv-show-item .tv-show-info a {
-    color: #eeb902;
-    text-decoration: none; /* Remove underline from link */
-    font-weight: bold;
-    padding: 10px;
-    display:grid;
-    gap: 8px;
+  color: #eeb902;
+  text-decoration: none; /* Remove underline from link */
+  font-weight: bold;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
 }

@@ -3,11 +3,16 @@
   padding: 0;
 }
 
+/* FONTS: 
+Quicksand - headers and nav bar
+Varta - normal text and paragraphs  */
+
 body {
   background: #1f1f1f;
   color: #f7f7f2;
   display: flex;
   flex-direction: column;
+  font-family: Varta, sans-serif;
 }
 
 .landing-page-img {
@@ -38,7 +43,77 @@ body {
 }
 
 /* RANDOMIZER */
+.randomizer-container h1 {
+  font-size: 2.1rem;
+}
+
+.randomizer-container .tv-show-description {
+  height: 7em;
+}
+
+.yellow-color {
+  color: #eeb902;
+}
+
+#random-show-card {
+  margin: 2em 0;
+}
+
+#randomizer-btn {
+  font-size: 1.5rem;
+  color: #f7f7f2;
+  background: #474747;
+  border: 0.1em solid #eeb902;
+  border-radius: 0.5em;
+  padding: 0.5em 2.5em;
+}
+
+#randomizer-btn:hover {
+  box-shadow: 0px 4px 22px 3px #141414;
+}
+#randomizer-btn:active {
+  box-shadow: inset 0px 4px 22px -3px #1f1f1f;
+}
+
+#randomizer-btn:focus {
+  outline: none;
+}
+
 .randomizer-container {
-  margin-top: 10em;
+  margin: 7em auto 0 auto;
   text-align: center;
+  width: 80vw;
+}
+
+@media (min-width: 500px) {
+  .randomizer-container {
+    width: 60vw;
+  }
+  .randomizer-container h1 {
+    font-size: 2.6rem;
+  }
+}
+@media (min-width: 700px) {
+  .randomizer-container {
+    width: 50vw;
+  }
+  .randomizer-container h1 {
+    font-size: 3.1rem;
+  }
+}
+@media (min-width: 1000px) {
+  .randomizer-container {
+    width: 40vw;
+  }
+  .randomizer-container h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1400px) {
+  .randomizer-container {
+    width: 30vw;
+  }
+  .randomizer-container h1 {
+    font-size: 3.7rem;
+  }
 }
