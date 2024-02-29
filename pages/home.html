@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="/media/logo.png" type="image/x-icon">
 
     <!-- LINKING GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Varta:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Varta:wght@300..700&display=swap" rel="stylesheet"/>
     <title>What do you want to watch?</title>
 
     <!-- LINKING STYLESHEETS -->
-    <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/header.css" />
-    <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/tvShowTemplate.css" />
+    <link rel="stylesheet" href="../styles/style.css"/>
+    <link rel="stylesheet" href="../styles/home.css"/>
+    <link rel="stylesheet" href="../styles/header.css"/>
+    <link rel="stylesheet" href="../styles/footer.css"/>
+    <link rel="stylesheet" href="../styles/tvShowTemplate.css"/>
 
     <!-- LINKING JS FILE -->
-    <script type="module" src="../main.js"></script>
+    <script type="module" src="../scripts/home.js"></script>
   </head>
   <body>
     <!-- HEADER -->
     <header class="header">
-      <img class="logo-img" src="../media/logo.png" alt="" />
+      <img class="logo-img" src="../media/logo.png" alt=""/>
       <div>
         <p class="mobile-header-text">What to watch?</p>
       </div>
@@ -34,37 +33,37 @@
       <nav class="nav-bar-container">
         <ul class="nav-bar">
           <li class="nav-item">
-            <img class="icon-img" src="../media/house-icon.png" alt="" />
-            <p class="nav-item-text">
-              <a class="page-link" href="../pages/home.html">Home</a>
-            </p>
+            <a href="../pages/home.html">
+              <img class="icon-img" src="../media/house-icon.png" alt="Home"/>
+            </a>
+            <a class="page-link nav-item-text" href="../pages/home.html">Home</a>
           </li>
           <li class="nav-item">
-            <img class="icon-img" src="../media/search-icon.png" alt="" />
-            <p class="nav-item-text">
-              <a class="page-link" href="../pages/search.html">Search</a>
-            </p>
+            <a href="../pages/search.html">
+              <img class="icon-img" src="../media/search-icon.png" alt="Search"/>
+            </a>
+            <a class="page-link nav-item-text" href="../pages/search.html">Search</a>
           </li>
           <li class="nav-item">
-            <img class="icon-img" src="../media/random-icon.png" alt="" />
-            <p class="nav-item-text">
-              <a class="page-link" href="../pages/randomizer.html"
-                >Randomizer</a
-              >
-            </p>
+            <a href="../pages/randomizer.html">
+              <img class="icon-img" src="../media/random-icon.png" alt="Randomizer"/>
+            </a>
+            <a class="page-link nav-item-text" href="../pages/randomizer.html">Randomizer</a>
           </li>
         </ul>
       </nav>
+      <!-- NAV BAR END -->
     </header>
-    <!-- NAV BAR END -->
 
     <main>
       <div class="home-content-container">
-        <img class="landing-page-img" src="../media/header.png" alt="" />
-        <section>
-          <div id="top-rated-tv-shows" class="tv-shows-list"></div>
-        </section>
+        <a href="../pages/randomizer.html">
+          <img class="landing-page-img" src="../media/header.png" alt="Randomizer Header"/>
+        </a>
       </div>
+      <section>
+        <div id="top-rated-tv-shows" class="tv-shows-list"></div>
+      </section>
     </main>
     <footer>footer</footer>
   </body>
