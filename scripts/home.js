@@ -11,9 +11,6 @@ const displayTopRatedTvShows = () => {
             return ratingB - ratingA;
         });
 
-        // Take the top 100 shows
-        const top100TvShows = sortedTvShows.slice(0, 100);
-
         // Function to get a random'ish selection of shows
         const getRandomShows = (shows, num) => {
             const shuffled = [...shows].sort(() => 0.5 - Math.random());
@@ -21,7 +18,7 @@ const displayTopRatedTvShows = () => {
         };
 
         // Get 8 random shows from the top 100
-        const randomTopRatedTvShows = getRandomShows(top100TvShows, 8);
+        const randomTopRatedTvShows = getRandomShows(sortedTvShows, 8);
 
         const container = document.getElementById("top-rated-tv-shows");
         container.innerHTML = ""; // Clear existing content
