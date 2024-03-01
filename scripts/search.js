@@ -1,30 +1,11 @@
-import { createTvShowCard } from "./template.js";
+import { searchTVShows } from "./utilities.js";
 import { createTopRatedShows } from "./utilities.js";
-
-export function searchTVShows(name, divContainer) {
-    const searchUrl = `https://api.tvmaze.com/search/shows?q=${encodeURIComponent(name)}`;
-
-    fetch(searchUrl)
-        .then(response => response.json())
-        .then(results => {
-            const tvShows = results.map(result => result.show);
-
-            // Clear previous content in the container
-            document.querySelector(divContainer).innerHTML = "";
-
-            // Use the shows to create TV show cards
-            tvShows.forEach(tvShow => {
-                createTvShowCard(divContainer, tvShow);
-            });
-        })
-        .catch(error => console.error("Error searching for TV shows:", error));
-}
 
 document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("search-input");
     const searchResultsContainer = document.getElementById("search-results");
 
-    createTopRatedShows("#search-results")
+    createTopRatedShows("#search-results", 8)
 
     if (searchResultsContainer) {
         input.addEventListener("input", (event) => {
