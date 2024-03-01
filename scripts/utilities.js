@@ -24,7 +24,7 @@ export const fetchTVShowsById = (id) => {
 // Function to insert the Tv Show card into a div container
 export const createTvShowCard = (divContainer, tvShowData) => {
   const container = document.querySelector(divContainer);
-  container.innerHTML += tvShowCardTemplate(tvShowData);
+  container.insertAdjacentHTML('beforeend', tvShowCardTemplate(tvShowData));
 };
 
 // Function to truncate the summary to a maximum length

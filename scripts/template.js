@@ -28,7 +28,7 @@ export const tvShowCardTemplate = (tvShowData) => {
             </div>
             <p class="tv-show-genre"><b>Genre: ${tvShowData.genres.join(", ")}</b></p>
             <div class="tv-show-description">${truncatedSummary}</div>
-            <a href="${tvShowData.url}">More info</a>
+            <a href="${tvShowData.url}" target="_blank" rel="noopener noreferrer">More info</a>
         </div>
     </div>
     `;
