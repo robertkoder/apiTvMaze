@@ -29,21 +29,30 @@ export const truncateSummary = (summary, maxLength) => {
 };
 
 // Function to create a div with X amount of top rated shows
-export function createTopRatedShows(divContainer, count = 6) {
-  fetchTVShows()
-    .then((tvShows) => {
-      // Sort TV shows by rating from high to low, then slice to get the first X shows
-      const topRatedTvShows = tvShows
-        .sort((a, b) => b.rating.average - a.rating.average)
-        .slice(0, count);
-
-      // Clear previous content in the container
-      document.querySelector(divContainer).innerHTML = "";
-
-      // Use the sorted shows to create TV show cards
-      topRatedTvShows.forEach((tvShow) => {
-        createTvShowCard(divContainer, tvShow);
+export const createTopRatedShows = (divContainer) => {
+  fetchTVShows().then(tvShows => {
+      // Sort TV shows by rating from high to low
+      const sortedTvShows = tvShows.sort((a, b) => {
+          const ratingA = a.rating && a.rating.average ? a.rating.average : 0;
+          const ratingB = b.rating && b.rating.average ? b.rating.average : 0;
+          return ratingB - ratingA;
       });
-    })
-    .catch((error) => console.error("Error fetching top-rated shows:", error));
-}
+
+      // Function to get a random'ish selection of shows
+      const getRandomShows = (shows, num) => {
+          const shuffled = [...shows].sort(() => 0.5 - Math.random());
+          return shuffled.slice(0, num);
+      };
+
+      // Get 8 random shows from the top 100
+      const randomTopRatedTvShows = getRandomShows(sortedTvShows, 8);
+
+      const container = document.querySelector(divContainer);
+      container.innerHTML = ""; // Clear existing content
+
+      // Use the random shows to create TV show cards
+      randomTopRatedTvShows.forEach(tvShow => {
+          createTvShowCard(divContainer, tvShow);
+      });
+  }).catch(error => console.error("Error fetching top-rated shows:", error));
+};

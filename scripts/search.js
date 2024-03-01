@@ -1,4 +1,5 @@
 import { createTvShowCard } from "./template.js";
+import { createTopRatedShows } from "./utilities.js";
 
 export function searchTVShows(name, divContainer) {
     const searchUrl = `https://api.tvmaze.com/search/shows?q=${encodeURIComponent(name)}`;
@@ -22,6 +23,8 @@ export function searchTVShows(name, divContainer) {
 document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("search-input");
     const searchResultsContainer = document.getElementById("search-results");
+
+    createTopRatedShows("#search-results")
 
     if (searchResultsContainer) {
         input.addEventListener("input", (event) => {
