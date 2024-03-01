@@ -31,3 +31,8 @@ buttonEl.addEventListener("click", async () => {
     createTvShowCard("#random-show-card", randomShow);
   }
 });
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const randomShow = await generateRandomShow();
+  createTvShowCard("#random-show-card", randomShow);
+});

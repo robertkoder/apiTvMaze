@@ -11,11 +11,15 @@
 }
 
 .tv-show-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin-bottom: 20px;
   background-color: #474747;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 10px 0px -1px #eeb902;
+  gap: 40px;
 }
 
 .tv-show-image {
@@ -23,7 +27,7 @@
   height: 450px;
   background-size: cover;
   background-position: center;
-  margin-bottom: 10px;
+  margin-bottom: -35px;
   border-radius: 10px 10px 10px 10px;
 }
 
@@ -56,6 +60,7 @@
 .tv-show-description {
   font-size: 1em;
   color: #f7f7f2;
+  box-sizing: border-box;
 }
 
 .tv-show-item .tv-show-info a {
@@ -65,4 +70,10 @@
   padding: 10px;
   display: grid;
   gap: 8px;
+}
+
+.tv-show-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
