@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="shortcut icon" href="/media/logo.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/media/logo.png" type="image/x-icon" />
 
     <!-- LINKING GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Varta:wght@300..700&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Varta:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <title>What do you want to watch?</title>
 
     <!-- LINKING STYLESHEETS -->
-    <link rel="stylesheet" href="../styles/style.css"/>
-    <link rel="stylesheet" href="../styles/home.css"/>
-    <link rel="stylesheet" href="../styles/header.css"/>
-    <link rel="stylesheet" href="../styles/footer.css"/>
-    <link rel="stylesheet" href="../styles/tvShowTemplate.css"/>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/tvShowTemplate.css" />
 
     <!-- LINKING JS FILE -->
     <script type="module" src="../scripts/home.js"></script>
@@ -24,7 +27,7 @@
   <body>
     <!-- HEADER -->
     <header class="header">
-      <img class="logo-img" src="../media/logo.png" alt=""/>
+      <img class="logo-img" src="../media/logo.png" alt="" />
       <div>
         <p class="mobile-header-text">What to watch?</p>
       </div>
@@ -34,21 +37,35 @@
         <ul class="nav-bar">
           <li class="nav-item">
             <a href="../pages/home.html">
-              <img class="icon-img" src="../media/house-icon.png" alt="Home"/>
+              <img class="icon-img" src="../media/house-icon.png" alt="Home" />
             </a>
-            <a class="page-link nav-item-text" href="../pages/home.html">Home</a>
+            <a class="page-link nav-item-text" href="../pages/home.html"
+              >Home</a
+            >
           </li>
           <li class="nav-item">
             <a href="../pages/search.html">
-              <img class="icon-img" src="../media/search-icon.png" alt="Search"/>
+              <img
+                class="icon-img"
+                src="../media/search-icon.png"
+                alt="Search"
+              />
             </a>
-            <a class="page-link nav-item-text" href="../pages/search.html">Search</a>
+            <a class="page-link nav-item-text" href="../pages/search.html"
+              >Search</a
+            >
           </li>
           <li class="nav-item">
             <a href="../pages/randomizer.html">
-              <img class="icon-img" src="../media/random-icon.png" alt="Randomizer"/>
+              <img
+                class="icon-img"
+                src="../media/random-icon.png"
+                alt="Randomizer"
+              />
             </a>
-            <a class="page-link nav-item-text" href="../pages/randomizer.html">Randomizer</a>
+            <a class="page-link nav-item-text" href="../pages/randomizer.html"
+              >Randomizer</a
+            >
           </li>
         </ul>
       </nav>
@@ -58,13 +75,67 @@
     <main>
       <div class="home-content-container">
         <a href="../pages/randomizer.html">
-          <img class="landing-page-img" src="../media/header.png" alt="Randomizer Header"/>
+          <img
+            class="landing-page-img"
+            src="../media/header.png"
+            alt="Randomizer Header"
+          />
         </a>
       </div>
       <section>
         <div id="top-rated-tv-shows" class="tv-shows-list"></div>
       </section>
     </main>
-    <footer>footer</footer>
+    <footer>
+      <nav class="nav-bar-container-footer">
+        <ul class="nav-bar-footer">
+          <li class="nav-item-footer">
+            <a href="../pages/home.html">
+              <img
+                class="icon-img-footer"
+                src="../media/house-icon.png"
+                alt="Home"
+              />
+            </a>
+            <a class="page-link nav-item-text-footer" href="../pages/home.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item-footer">
+            <a href="../pages/search.html">
+              <img
+                class="icon-img-footer"
+                src="../media/search-icon.png"
+                alt="Search"
+              />
+            </a>
+            <a
+              class="page-link nav-item-text-footer"
+              href="../pages/search.html"
+              >Search</a
+            >
+          </li>
+          <li class="nav-item-footer">
+            <a href="../pages/randomizer.html">
+              <img
+                class="icon-img-footer"
+                src="../media/random-icon.png"
+                alt="Randomizer"
+              />
+            </a>
+            <a
+              class="page-link nav-item-text-footer"
+              href="../pages/randomizer.html"
+              >Randomizer</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <p class="made-by-text">
+        <img class="footer-icon" src="../media/handshake.png" alt="" />
+        Made by <a href="https://github.com/robertkoder">Robert</a> and
+        <a href="https://github.com/EmilieB10">Emilie</a>
+      </p>
+    </footer>
   </body>
 </html>
