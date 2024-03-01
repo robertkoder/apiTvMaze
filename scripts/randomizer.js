@@ -1,4 +1,4 @@
-import { createTvShowCard } from "./template.js";
+import { createTvShowCard } from "./utilities.js";
 import { fetchTVShowsById } from "./utilities.js";
 
 const buttonEl = document.querySelector("#randomizer-btn");

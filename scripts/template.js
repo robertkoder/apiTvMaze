@@ -33,9 +33,3 @@ export const tvShowCardTemplate = (tvShowData) => {
     </div>
     `;
 };
-
-// Function to insert the Tv Show card into a div container
-export const createTvShowCard = (divContainer, tvShowData) => {
-  const container = document.querySelector(divContainer);
-  container.innerHTML += tvShowCardTemplate(tvShowData);
-};

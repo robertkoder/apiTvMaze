@@ -1,4 +1,4 @@
-import { createTvShowCard } from "./template.js";
+import { tvShowCardTemplate } from "./template.js";
 
 // Function to fetch tv shows
 export const fetchTVShows = () => {
@@ -20,6 +20,12 @@ export const fetchTVShowsById = (id) => {
   return response;
 };
 
+// Function to insert the Tv Show card into a div container
+export const createTvShowCard = (divContainer, tvShowData) => {
+  const container = document.querySelector(divContainer);
+  container.innerHTML += tvShowCardTemplate(tvShowData);
+};
+
 // Function to truncate the summary to a maximum length
 export const truncateSummary = (summary, maxLength) => {
     if (summary.length > maxLength) {
@@ -27,6 +33,26 @@ export const truncateSummary = (summary, maxLength) => {
     }
     return summary;
 };
+
+// Function to search TV Shows by name
+export const searchTVShows = (name, divContainer) => {
+  const searchUrl = `https://api.tvmaze.com/search/shows?q=${encodeURIComponent(name)}`;
+
+  fetch(searchUrl)
+      .then(response => response.json())
+      .then(results => {
+          const tvShows = results.map(result => result.show);
+
+          // Clear previous content in the container
+          document.querySelector(divContainer).innerHTML = "";
+
+          // Use the shows to create TV show cards
+          tvShows.forEach(tvShow => {
+              createTvShowCard(divContainer, tvShow);
+          });
+      })
+      .catch(error => console.error("Error searching for TV shows:", error));
+}
 
 // Function to create a div with X amount of top rated shows
 export const createTopRatedShows = (divContainer) => {
