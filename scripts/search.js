@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("search-input");
     const searchResultsContainer = document.getElementById("search-results");
 
-    createTopRatedShows("#search-results")
+    createTopRatedShows("#search-results", 8)
 
     if (searchResultsContainer) {
         input.addEventListener("input", (event) => {

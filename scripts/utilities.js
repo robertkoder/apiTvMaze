@@ -10,6 +10,7 @@ export const fetchTVShows = () => {
     });
 };
 
+// Function to fetch TV Shows by ID
 export const fetchTVShowsById = (id) => {
   const response = fetch(`https://api.tvmaze.com/shows/${id}`)
     .then((response) => response.json())
@@ -55,7 +56,7 @@ export const searchTVShows = (name, divContainer) => {
 }
 
 // Function to create a div with X amount of top rated shows
-export const createTopRatedShows = (divContainer) => {
+export const createTopRatedShows = (divContainer, amount = 8) => {
   fetchTVShows().then(tvShows => {
       // Sort TV shows by rating from high to low
       const sortedTvShows = tvShows.sort((a, b) => {
@@ -71,7 +72,7 @@ export const createTopRatedShows = (divContainer) => {
       };
 
       // Get 8 random shows from the top 100
-      const randomTopRatedTvShows = getRandomShows(sortedTvShows, 8);
+      const randomTopRatedTvShows = getRandomShows(sortedTvShows, amount);
 
       const container = document.querySelector(divContainer);
       container.innerHTML = ""; // Clear existing content
