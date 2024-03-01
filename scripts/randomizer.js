@@ -15,9 +15,9 @@ const generateRandomShow = async () => {
   const randomNumber = Math.floor(Math.random() * 74970);
   let randomShow = await fetchTVShowsById(randomNumber);
   console.log(randomShow);
-  if (randomShow.status == 404) {
-    console.log("looolS");
-    generateRandomShow();
+  if (randomShow.status == 404 || !randomShow.summary) {
+    console.log("Error or no summary, fetching a different show...");
+    return generateRandomShow(); // Return the result of the recursive call
   } else {
     return randomShow;
   }
