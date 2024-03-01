@@ -15,7 +15,7 @@ export const tvShowCardTemplate = (tvShowData) => {
   // Truncate the summary if it's too long
   let truncatedSummary = ""
   if (tvShowData.summary) {
-    truncatedSummary = truncateSummary(tvShowData.summary, 250);
+    truncatedSummary = truncateSummary(tvShowData.summary, 160);
   }
 
   return `

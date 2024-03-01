@@ -29,5 +29,13 @@
 }
 
 #search-results {
-    margin-top: calc(5em + 85px);
+    margin-top: 5em;
+    padding-bottom: 5em;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 5em;
 }
